@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis|Architects+Daughter|Open+Sans);
+html {
+  background: lightgray; }
+
+body {
+  width: 960px;
+  margin: 10px auto;
+  font-family: Open Sans, Helvetica, Arial, sans-serif; }
+  body #title {
+    background: white;
+    margin-top: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  body p {
+    font-size: 16px;
+    text-align: center; }
+
+.fa {
+  font-size: 3em !important; }
+
+h1 {
+  text-align: center;
+  border: 3px solid red;
+  padding: 20px; }
+  h1 em {
+    color: #00C0FF; }
+
+#btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  color: red;
+  background: #00C0FF;
+  width: 160px;
+  font-family: Dosis;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0px 15px 5px -10px rgba(0, 0, 0, 0.4);
+  transition: all ease-in-out 300ms;
+  outline: none; }
+  #btn:hover {
+    box-shadow: 0px 25px 5px -20px rgba(0, 0, 0, 0.2); }
+
+#done {
+  border: 2px solid green;
+  padding: 10px;
+  margin: 10px; }
+
+/*# sourceMappingURL=main.css.map */
