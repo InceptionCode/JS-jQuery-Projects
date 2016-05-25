@@ -15,7 +15,7 @@ body{
 
     #title{
         background: white;
-        margin-top: 150px;
+        margin-top: 50px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -27,6 +27,9 @@ body{
         text-align: center;
     }
     
+}
+#title2{
+	@extend #title;
 }
 
 .fa{
@@ -67,8 +70,53 @@ h1 {
     }
 }
 
+#btn-2{
+	@extend #btn;
+}
+	
 #done{
     border: 2px solid green;
     padding: 10px;
     margin: 10px;
+}
+
+//Dig until you hit the bottom
+.dig-container{
+	display: flex;
+	flex-direction: column;
+}
+	.dig-container span, .stop{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 10px auto;
+	text-align: center;
+	padding: 10px 15px;
+//Each child increses width and border
+	&:nth-child(1){
+	border-bottom: 2px solid rgba(0,0,0,0.4);
+	width: 30px;
+	}
+
+	&:nth-child(2){
+	border-bottom: 3px solid rgba(0,0,0,0.4);
+	width: 30px;
+	}
+	&:nth-child(3){
+	border-bottom: 4px solid rgba(0,0,0,0.4);
+	width: 60px;
+	}
+	&:nth-child(4){
+	border-bottom: 5px solid rgba(0,0,0,0.4);
+	width: 90px;
+	}
+	&:nth-child(5){
+	border-bottom: 6px solid rgba(0,0,0,0.4);
+	width: 120px;
+	}
+}
+.stop{
+	display: none;
+	border-bottom: 7px solid rgba(0,0,0,0.4);
+	width: 150px;
+	box-shadow: 0 15px 3px -5px rgba(0,0,0,0.2)
 }
