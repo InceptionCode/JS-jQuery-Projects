@@ -1,19 +1,19 @@
 //When button is clicked run this function
- function buildWater() {
-    var amount = 0,//amount you have
-	     bottles = 10; //total amount of water bottles in store
+function buildWater() {
+   var amount = 0,//amount you have
+	   bottles = 10; //total amount of water bottles in store
     
-    while (amount < bottles) {
+   while (amount < bottles) {
         
-        $("#here").text("You got a bottle."); // add this message to the span each time
+      $("#here").text("You got a bottle."); // add this message to the span each time
         
-        amount = amount += 1; // each click should add 1 towards your amount
-        bottles = bottles -= amount;
+      amount = amount += 1; // each click should add 1 towards your amount
+      bottles = bottles -= amount;
         //If we are out of water
-        if (bottles < amount) {
-            $('#done').text("Sorry we don't have anymore water....");
-        }
-    }
+      if (bottles < amount) {
+         $('#done').text("Sorry we don't have anymore water....");
+      }
+   }
 }
 
 $("#btn").click(function () {
@@ -21,30 +21,34 @@ $("#btn").click(function () {
 });
 
 //Testing my closure skills
-var $this = $('.dig-container span:nth-child(n)');
+var $this = $('.dig-container span');
 
-$('#btn-2').click(function () {
-	$this.show();
-		
-	function dig (clicks) {
-		function howLow() {
-			$this.text('dig');
-			console.log(clicks);
-			console.log($this.text());
-		}
-		return howLow ();	
-	}
-	
-	for(i = 0; i < $this.length; i++){
-		dig(i);
-		if(i === 4) {
-			$('.stop').show();
-		}
-	}
+function dig(size) {
+	return function (width) {
+		$this.show().css({
+			'font-size': size + 'px',
+			'border-bottom': '5px solid rgba(0,0,0,0.4)',
+			'width': width + 'px'
+		});
+	};
+}
+var size34 = dig(34),
+	size44 = dig(44),
+	size54 = dig(54);
+
+$('#btn-1').click(function () {
+	size34(60);
+	$this.text('dig');
 });
-	
-	
+$('#btn-2').click(function () {
+	size44(90);
+});
+$('#btn-3').click(function () {
+	size54(120);
+	$('.stop').show();
+});
 
-//I want to fill each span with each button click one at a time.
-// I have to grab the button and add a click function.
-//The click function must include the variables that allow the closure to work.
+/* The goal is to increase the size and width of the span by each click.
+Also, add some animation or delay to the change in span.
+I know I neccessarily don't need to use a closure but I wanted to find some practical use for one. 
+This was meant just for practice. */
