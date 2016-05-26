@@ -86,6 +86,7 @@ h1 {
 	flex-direction: column;
 }
 	.dig-container span, .stop{
+	display: none;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 10px auto;
@@ -115,7 +116,6 @@ h1 {
 	}
 }
 .stop{
-	display: none;
 	border-bottom: 7px solid rgba(0,0,0,0.4);
 	width: 150px;
 	box-shadow: 0 15px 3px -5px rgba(0,0,0,0.2)

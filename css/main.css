@@ -70,35 +70,35 @@ h1 {
 
 /* line 88, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .dig-container span, .stop {
+  display: none;
   text-transform: uppercase;
   font-weight: bold;
   margin: 10px auto;
   text-align: center;
   padding: 10px 15px; }
-  /* line 95, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 96, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   .dig-container span:nth-child(1), .stop:nth-child(1) {
     border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     width: 30px; }
-  /* line 100, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 101, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   .dig-container span:nth-child(2), .stop:nth-child(2) {
     border-bottom: 3px solid rgba(0, 0, 0, 0.4);
     width: 30px; }
-  /* line 104, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 105, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   .dig-container span:nth-child(3), .stop:nth-child(3) {
     border-bottom: 4px solid rgba(0, 0, 0, 0.4);
     width: 60px; }
-  /* line 108, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 109, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   .dig-container span:nth-child(4), .stop:nth-child(4) {
     border-bottom: 5px solid rgba(0, 0, 0, 0.4);
     width: 90px; }
-  /* line 112, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 113, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   .dig-container span:nth-child(5), .stop:nth-child(5) {
     border-bottom: 6px solid rgba(0, 0, 0, 0.4);
     width: 120px; }
 
-/* line 117, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 118, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .stop {
-  display: none;
   border-bottom: 7px solid rgba(0, 0, 0, 0.4);
   width: 150px;
   box-shadow: 0 15px 3px -5px rgba(0, 0, 0, 0.2); }

@@ -21,31 +21,30 @@ $("#btn").click(function () {
 });
 
 //Testing my closure skills
-function dig (deep) {
-	var howLow = function (low) {
-		return deep * low;
+var $this = $('.dig-container span:nth-child(n)');
+
+$('#btn-2').click(function () {
+	$this.show();
+		
+	function dig (clicks) {
+		function howLow() {
+			$this.text('dig');
+			console.log(clicks);
+			console.log($this.text());
+		}
+		return howLow ();	
 	}
-	return howLow;
-};
+	
+	for(i = 0; i < $this.length; i++){
+		dig(i);
+		if(i === 4) {
+			$('.stop').show();
+		}
+	}
+});
+	
+	
 
 //I want to fill each span with each button click one at a time.
 // I have to grab the button and add a click function.
 //The click function must include the variables that allow the closure to work.
-
-var amount1 = dig(1);
-
-$('#btn-2').click(function () {
-	
-	amount1(1);
-	
-	for(i = 0; i < 5; i += 1) {
-		var $this = $('.dig-container span:nth-child(n)');
-		
-		$this.text('dig');
-		
-		if(i === 4){
-			$('.stop').show();
-		}
-	}
-
-});
