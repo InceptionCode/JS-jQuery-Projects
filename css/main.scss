@@ -1,6 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis|Architects+Daughter|Open+Sans);
 
 $font: Open Sans, Helvetica, Arial, sans-serif;
+%font-stack{
+	font-family: Dosis, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+}
+
 $ocean: #00C0FF;
 $icon: 3em;
 
@@ -28,7 +34,7 @@ body{
     }
     
 }
-#title2{
+#title2, #title3{
 	@extend #title;
 	height: 600px;
 }
@@ -71,11 +77,12 @@ h1 {
     }
 }
 
-#btn-1, #btn-2, #btn-3{
+#btn-1, #btn-2, #btn-3, #box-button,
+#box-button2{
 	@extend #btn;
 	margin-right: 15px;
 }
-	
+
 #done{
     border: 2px solid green;
     padding: 10px;
@@ -106,4 +113,24 @@ h1 {
 	border-bottom: 9px solid rgba(0,0,0,0.4);
 	width: 150px;
 	box-shadow: 0 15px 3px -5px rgba(0,0,0,0.2)
+}
+
+//Box Run
+.box{
+	padding: 10px;
+	width: 100px;
+	height: 60px;
+	background: green;
+	margin: 30px auto;
+	border-radius: 3px;
+	position: relative;
+	
+	p{
+		@extend %font-stack;
+		margin: 0 auto 15px auto;
+	}
+}
+#box-button2{
+	position: relative;
+	display: none;
 }

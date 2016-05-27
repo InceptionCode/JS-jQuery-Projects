@@ -1,15 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis|Architects+Daughter|Open+Sans);
-/* line 8, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 4, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+.box p {
+  font-family: Dosis, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 22px; }
+
+/* line 14, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 html {
   background: lightgray; }
 
-/* line 11, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 17, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 body {
   width: 960px;
   margin: 10px auto;
   font-family: Open Sans, Helvetica, Arial, sans-serif; }
-  /* line 16, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-  body #title, body #title2 {
+  /* line 22, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  body #title, body #title2, body #title3 {
     background: white;
     margin-top: 50px;
     padding: 20px;
@@ -17,30 +23,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  /* line 25, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 31, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   body p {
     font-size: 16px;
     text-align: center; }
 
-/* line 31, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-#title2 {
+/* line 37, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+#title2, #title3 {
   height: 600px; }
 
-/* line 36, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 42, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .fa {
   font-size: 3em !important; }
 
-/* line 40, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 46, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 h1 {
   text-align: center;
   border: 3px solid red;
   padding: 20px; }
-  /* line 45, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  /* line 51, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   h1 em {
     color: #00C0FF; }
 
-/* line 51, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-#btn, #btn-1, #btn-2, #btn-3 {
+/* line 57, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+#btn, #btn-1, #btn-2, #btn-3, #box-button,
+#box-button2 {
   display: inline-block;
   cursor: pointer;
   padding: 20px;
@@ -57,31 +64,33 @@ h1 {
   box-shadow: 0px 15px 5px -10px rgba(0, 0, 0, 0.4);
   transition: all ease-in-out 300ms;
   outline: none; }
-  /* line 69, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-  #btn:hover, #btn-1:hover, #btn-2:hover, #btn-3:hover {
+  /* line 75, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  #btn:hover, #btn-1:hover, #btn-2:hover, #btn-3:hover, #box-button:hover,
+  #box-button2:hover {
     box-shadow: 0px 25px 5px -20px rgba(0, 0, 0, 0.2); }
 
-/* line 74, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-#btn-1, #btn-2, #btn-3 {
+/* line 81, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+#btn-1, #btn-2, #btn-3, #box-button,
+#box-button2 {
   margin-right: 15px; }
 
-/* line 79, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 86, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 #done {
   border: 2px solid green;
   padding: 10px;
   margin: 10px; }
 
-/* line 86, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 93, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .dig-container {
   display: flex;
   flex-direction: column; }
 
-/* line 90, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 97, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 #button {
   display: flex;
   justify-content: center; }
 
-/* line 94, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 101, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .dig-container span, .stop {
   display: none;
   text-transform: uppercase;
@@ -93,10 +102,28 @@ h1 {
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   width: 30px; }
 
-/* line 105, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+/* line 112, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 .stop {
   border-bottom: 9px solid rgba(0, 0, 0, 0.4);
   width: 150px;
   box-shadow: 0 15px 3px -5px rgba(0, 0, 0, 0.2); }
+
+/* line 119, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+.box {
+  padding: 10px;
+  width: 100px;
+  height: 60px;
+  background: green;
+  margin: 30px auto;
+  border-radius: 3px;
+  position: relative; }
+  /* line 128, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+  .box p {
+    margin: 0 auto 15px auto; }
+
+/* line 133, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+#box-button2 {
+  position: relative;
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

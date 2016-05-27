@@ -1,4 +1,5 @@
-//When button is clicked run this function
+$(document).ready(function () {
+	//When button is clicked run this function
 function buildWater() {
    var amount = 0,//amount you have
 	   bottles = 10; //total amount of water bottles in store
@@ -52,3 +53,19 @@ $('#btn-3').click(function () {
 Also, add some animation or delay to the change in span.
 I know I neccessarily don't need to use a closure but I wanted to find some practical use for one. 
 This was meant just for practice. */
+
+
+$('#box-button').click(function () {
+	$('.box').css({
+		'left': '+=15px'
+	});
+
+//only can be ran once box-button is clicked
+	$('#box-button2').show().click(function () {
+			$('.box').css({
+			'left': '-=15px'
+		});
+	});
+})
+
+});
