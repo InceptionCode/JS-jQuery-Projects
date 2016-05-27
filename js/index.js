@@ -56,13 +56,13 @@ This was meant just for practice. */
 
 
 $('#box-button').click(function () {
-	$('.box').css({
+	$('.box').animate({
 		'left': '+=15px'
 	});
 
 //only can be ran once box-button is clicked
 	$('#box-button2').show().click(function () {
-			$('.box').css({
+			$('.box').animate({
 			'left': '-=15px'
 		});
 	});
