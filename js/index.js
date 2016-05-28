@@ -26,7 +26,7 @@ var $this = $('.dig-container span');
 
 function dig(size) {
 	return function (width) {
-		$this.show().css({
+		$this.show().animate({
 			'font-size': size + 'px',
 			'border-bottom': '5px solid rgba(0,0,0,0.4)',
 			'width': width + 'px'
@@ -46,7 +46,9 @@ $('#btn-2').click(function () {
 });
 $('#btn-3').click(function () {
 	size54(120);
-	$('.stop').show();
+	$('.stop').show().animate({
+		'width': '+=20'
+	});
 });
 
 /* The goal is to increase the size and width of the span by each click.
@@ -68,4 +70,15 @@ $('#box-button').click(function () {
 	});
 })
 
+//How tall can you make the building
+var count = 1;
+$('#grow-button').on('click',function () {
+		$('img').animate({
+			'height': '+=1px'
+		});
+		var $amount = $('#title4 span');
+	   $amount.text(count);
+		count++;
+	});
 });
+ 

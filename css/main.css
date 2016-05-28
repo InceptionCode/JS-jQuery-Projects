@@ -15,7 +15,7 @@ body {
   margin: 10px auto;
   font-family: Open Sans, Helvetica, Arial, sans-serif; }
   /* line 22, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-  body #title, body #title2, body #title3 {
+  body #title, body #title2, body #title3, body #title4 {
     background: white;
     margin-top: 50px;
     padding: 20px;
@@ -29,7 +29,7 @@ body {
     text-align: center; }
 
 /* line 37, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
-#title2, #title3 {
+#title2, #title3, #title4 {
   height: 600px; }
 
 /* line 42, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
@@ -47,7 +47,7 @@ h1 {
 
 /* line 57, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 #btn, #btn-1, #btn-2, #btn-3, #box-button,
-#box-button2 {
+#box-button2, #grow-button {
   display: inline-block;
   cursor: pointer;
   padding: 20px;
@@ -66,12 +66,12 @@ h1 {
   outline: none; }
   /* line 75, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
   #btn:hover, #btn-1:hover, #btn-2:hover, #btn-3:hover, #box-button:hover,
-  #box-button2:hover {
+  #box-button2:hover, #grow-button:hover {
     box-shadow: 0px 25px 5px -20px rgba(0, 0, 0, 0.2); }
 
 /* line 81, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 #btn-1, #btn-2, #btn-3, #box-button,
-#box-button2 {
+#box-button2, #grow-button {
   margin-right: 15px; }
 
 /* line 86, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
@@ -124,5 +124,9 @@ h1 {
 /* line 133, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
 #box-button2 {
   display: none; }
+
+/* line 139, /Users/darrellwashington/Documents/JS-jQuery-Projects/css/main.scss */
+#title4 h1 {
+  letter-spacing: 2px; }
 
 /*# sourceMappingURL=main.css.map */

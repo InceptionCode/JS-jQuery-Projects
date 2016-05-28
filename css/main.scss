@@ -34,7 +34,7 @@ body{
     }
     
 }
-#title2, #title3{
+#title2, #title3, #title4{
 	@extend #title;
 	height: 600px;
 }
@@ -78,7 +78,7 @@ h1 {
 }
 
 #btn-1, #btn-2, #btn-3, #box-button,
-#box-button2{
+#box-button2, #grow-button{
 	@extend #btn;
 	margin-right: 15px;
 }
@@ -132,4 +132,10 @@ h1 {
 }
 #box-button2{
 	display: none;
+}
+
+
+//Grow Building
+#title4 h1{
+	letter-spacing: 2px;
 }
