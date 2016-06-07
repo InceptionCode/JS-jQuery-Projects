@@ -1,13 +1,14 @@
+
 $(document).ready(function () {
 	//When button is clicked run this function
 function buildWater() {
    var amount = 0,//amount you have
 	   bottles = 10; //total amount of water bottles in store
-    
+
    while (amount < bottles) {
-        
+
       $("#here").text("You got a bottle."); // add this message to the span each time
-        
+
       amount = amount += 1; // each click should add 1 towards your amount
       bottles = bottles -= amount;
         //If we are out of water
@@ -53,7 +54,7 @@ $('#btn-3').click(function () {
 
 /* The goal is to increase the size and width of the span by each click.
 Also, add some animation or delay to the change in span.
-I know I neccessarily don't need to use a closure but I wanted to find some practical use for one. 
+I know I neccessarily don't need to use a closure but I wanted to find some practical use for one.
 This was meant just for practice. */
 
 
@@ -80,5 +81,16 @@ $('#grow-button').on('click',function () {
 	   $amount.text(count);
 		count++;
 	});
+
+//Fill the bar
+//When the button is pressed change the background of nth span to ocean color
+
+
+$('#fill-button').click(function () {
+  var span = '#bar span:nth-child(n)';
+  $(span).css({
+    'background': '#00C0FF'
+  })
 });
- 
+
+});

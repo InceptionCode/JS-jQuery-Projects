@@ -32,9 +32,9 @@ body{
         font-size: 16px;
         text-align: center;
     }
-    
+
 }
-#title2, #title3, #title4{
+#title2, #title3, #title4, #title5{
 	@extend #title;
 	height: 600px;
 }
@@ -47,7 +47,7 @@ h1 {
     text-align: center;
     border: 3px solid red;
     padding: 20px;
-    
+
     em{
         color: $ocean;
     }
@@ -71,14 +71,14 @@ h1 {
     box-shadow: 0px 15px 5px -10px rgba(0,0,0,0.4);
     transition: all ease-in-out 300ms;
     outline: none;
-    
+
     &:hover{
         box-shadow: 0px 25px 5px -20px rgba(0,0,0,0.2);
     }
 }
 
 #btn-1, #btn-2, #btn-3, #box-button,
-#box-button2, #grow-button{
+#box-button2, #grow-button, #fill-button{
 	@extend #btn;
 	margin-right: 15px;
 }
@@ -124,7 +124,7 @@ h1 {
 	margin: 30px auto;
 	border-radius: 3px;
 	position: relative;
-	
+
 	p{
 		@extend %font-stack;
 		margin: 0 auto 15px auto;
@@ -138,4 +138,19 @@ h1 {
 //Grow Building
 #title4 h1{
 	letter-spacing: 2px;
+}
+
+//Fill the bar
+div #bar{
+	margin-top: 50px;
+	span {
+		display: inline-block;
+		padding: 10px;
+		width: 100px;
+		background: lightgray;
+		margin-right: 3px;
+	}
+	#fill-button{
+		margin-left: 230px;
+	}
 }
