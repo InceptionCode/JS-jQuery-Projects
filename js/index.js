@@ -84,12 +84,13 @@ $('#grow-button').on('click',function () {
 
 //Fill the bar
 //When the button is pressed change the background of nth span to ocean color
-
-
+var span = ['#bar span:nth-child(1)','#bar span:nth-child(2)',
+                '#bar span:nth-child(3)','#bar span:nth-child(4)', '#bar span:nth-child(5)'],
+       i = -1;
 $('#fill-button').click(function () {
-  var span = '#bar span:nth-child(n)';
-  $(span).css({
-    'background': '#00C0FF'
+  i++;
+     $(span[i]).css({
+      'background': '#00C0FF'
   })
 });
 
