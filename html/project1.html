@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water</title>
+
+<!-- Fonts -->
+<link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+<!-- Style Sheet -->
+<link rel="stylesheet" href="../css/projects.css" type="text/css" />
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href = "../index.html">Home</a></li>
+    <li><a href = "project2.html">Contacts</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="heading">
+    <h1>Add People Project</h1>
+  </div>
+  <div class="add-people">
+    <input type="text" placeholder="Name . . . ">
+    <button id="addPerson">Add Person</button>
+  </div>
+  <div id="people">
+  <ul id="people-display">
+    <script id="people-template" type="text/template">
+      {{#people}}
+          <li>
+            <span>{{.}}</span>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+          </li>
+      {{/people}}
+    </script>
+  </ul>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- Mustache JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+<!-- script file -->
+<script type="text/javascript" src="../js/project1.js"></script>
+</body>
+</html>

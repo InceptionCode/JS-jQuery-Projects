@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water</title>
+
+<!-- Fonts -->
+<link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+<!-- Style Sheet -->
+<link rel="stylesheet" href="../css/projects.css" type="text/css" />
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href = "../index.html">Home</a></li>
+    <li><a href = "project1.html">Add Person</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="heading">
+    <h1>Contacts Project</h1>
+  </div>
+  <div id = "contacts-section">
+    <input type="text" placeholder="Search . . ." id = "filter"/>
+    <ul>
+      <script id="contacts-template" type="text/template">
+        {{#contacts}}
+          <li>
+            <span>{{.}}</span>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+          </li>
+        {{/contacts}}
+      </script>
+    </ul>
+    <input type="text" id="add-contact" placeholder="Add Contact"/>
+    <button>Save Contact</button>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- Mustache JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+<!-- script file -->
+<script type="text/javascript" src="../js/project2.js"></script>
+</body>
+</html>

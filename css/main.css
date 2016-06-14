@@ -22,6 +22,23 @@ body {
   body p {
     font-size: 16px;
     text-align: center; }
+  body nav {
+    background: black;
+    padding: 3px;
+    border-radius: 4px;
+    clear: both;
+    display: table;
+    content: "";
+    width: 100%; }
+    body nav ul {
+      list-style: none; }
+    body nav a {
+      color: white;
+      text-decoration: none;
+      float: left;
+      padding-left: 20px; }
+      body nav a:hover {
+        color: gray; }
 
 #title2, #title3, #title4, #title5 {
   height: 600px; }

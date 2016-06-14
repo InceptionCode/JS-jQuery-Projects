@@ -1,0 +1,112 @@
+$font: Open Sans, Helvetica, Arial, sans-serif
+%font-stack
+	font-family: Dosis, Arial, sans-serif
+	font-weight: bold
+	font-size: 22px
+
+$ocean: #00C0FF
+$icon: 3em
+
+
+body
+	font-family: $font
+
+nav
+	background: black
+	padding: 10px
+	border-radius: 4px
+	clear: both
+	display: table
+	content: ""
+	width: 100%
+	ul
+		list-style: none
+		a
+			color: white
+			text-decoration: none
+			float: left
+			padding-left: 20px
+			&:hover
+				color: gray
+//Add People Project
+div.container
+	width: 960px
+	margin: 15px auto
+	div.heading
+		background-color: lightgray
+		padding: 15px
+		margin-top: 100px
+		text-align: center
+
+	div.add-people
+		width: 480px
+		margin: 35px auto
+		display: flex
+		justify-content: center
+		input,button
+			padding: 5px
+			&:focus
+				outline: none
+				border: 1px solid black
+		button
+			border-radius: 7px
+			background-color: gray
+			font-weight: bold
+			&:hover
+				color: white
+				background-color: #444
+				cursor: pointer
+
+	div#people
+		width: 800px
+		margin: 10px auto
+		display: flex
+		justify-content: center
+		li
+			list-style: none
+			background-color: lightgreen
+			padding: 5px 10px
+			border-radius: 10px
+			float: left
+			margin: 5px
+			i
+				margin-left: 10px
+
+//Contacts Project
+div#contacts-section
+	margin-top: 30px
+	width: 300px
+	padding: 20px
+	border: 1px solid black
+	input,button
+		padding: 5px
+		&:focus
+			outline: none
+			border: 1px solid gray
+	input
+		width: 100%
+		&:hover
+			border: 1px solid gray
+	button
+		margin: 20px 100px
+		background-color: #4E70C4
+		color: lightgray
+		font-weight: bold
+		border-radius: 7px
+		box-shadow: 2px 10px 2px -7px rgba(0,0,0,0.3)
+		&:hover
+			background-color: #274ECA
+			color: white
+	ul
+		list-style: none
+		li
+			margin: 10px auto
+			padding: 5px
+			width: 210px
+			@extend: %font-stack
+			font-size: 18px
+			&:hover
+				background-color: lightgreen
+				cursor: pointer
+			i
+				margin-left: 10px
