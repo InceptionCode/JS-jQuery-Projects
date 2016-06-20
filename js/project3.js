@@ -17,7 +17,8 @@ $(document).ready(function () {
       },
       bindEvent: function () {
         this.$button.on('click', this.addItem.bind(this));
-        this.$ul.delegate('.fa','click', this.deletItem.bind(this));
+        this.$ul.delegate('.fa-trash','click', this.deleteItem.bind(this));
+        this.$ul.delegate('.fa-pencil','click', this.editItem.bind(this));
         this.$ul.delegate('.check','click', this.clearItem.bind(this));
       },
       render: function () {
@@ -39,7 +40,7 @@ $(document).ready(function () {
         this.render();
         this.$input.val('');
       },
-      deletItem: function (e) {
+      deleteItem: function (e) {
         var $remove = $(e.target).closest("li");
         var i = this.$ul.find('li').index($remove);
 
@@ -49,6 +50,14 @@ $(document).ready(function () {
       clearItem: function (e) {
         $(e.target).toggleClass('checked');
         $(e.target).closest('li').toggleClass('cancel');
+        this.render();
+      },
+      editItem: function (e) {
+        var target = $(e.target).closest('li');
+        this.$input.val(target.text());
+        var i = this.$ul.find('li').index(target);
+        this.list.splice(i,1);
+        this.render();
       }
     };
     todo.init();
