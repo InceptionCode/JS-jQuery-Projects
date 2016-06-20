@@ -50,7 +50,6 @@ $(document).ready(function () {
       clearItem: function (e) {
         $(e.target).toggleClass('checked');
         $(e.target).closest('li').toggleClass('cancel');
-        this.render();
       },
       editItem: function (e) {
         var target = $(e.target).closest('li');
