@@ -13,30 +13,29 @@
 <nav>
   <ul>
     <li><a href = "../index.html">Home</a></li>
+    <li><a href = "project1.html">Add Person</a></li>
     <li><a href = "project2.html">Contacts</a></li>
-    <li><a href = "project3.html">To-Do List</a></li>
   </ul>
 </nav>
 
 <div class="container">
   <div class="heading">
-    <h1>Add People Project</h1>
+    <h1>To-Do List Project</h1>
   </div>
-  <div class="add-people">
-    <input type="text" placeholder="Name . . . ">
-    <button id="addPerson">Add Person</button>
-  </div>
-  <div id="people">
-  <ul id="people-display">
-    <script id="people-template" type="text/template">
-      {{#people}}
-          <li>
-            <span>{{.}}</span>
-            <i class="fa fa-times-circle" aria-hidden="true"></i>
-          </li>
-      {{/people}}
-    </script>
-  </ul>
+  <div class="list">
+    <input type="text" id="add-todo" placeholder="Add a To-Do . . ."/>
+    <button>Add To-Do</button>
+    <ul id="list-display">
+      <script id="list-template" type="text/template">
+        {{#list}}
+            <li>
+              <span class="check"></span>
+              <span>{{.}}</span>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </li>
+        {{/list}}
+      </script>
+    </ul>
   </div>
 </div>
 <!-- jQuery -->
@@ -44,6 +43,6 @@
 <!-- Mustache JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
 <!-- script file -->
-<script type="text/javascript" src="../js/project1.js"></script>
+<script type="text/javascript" src="../js/project3.js"></script>
 </body>
 </html>

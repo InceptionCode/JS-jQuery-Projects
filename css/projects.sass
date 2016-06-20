@@ -110,3 +110,53 @@ div#contacts-section
 				cursor: pointer
 			i
 				margin-left: 10px
+// To-Do list Project
+div.list
+	width: 600px
+	margin: 30px auto
+
+	input
+		padding: 5px
+		margin: 10px 0 10px 150px
+		width: 200px
+		font-size: 16px
+		&:focus
+			outline: none
+			border: 1px solid black
+	button
+		padding: 5px
+		border: 1px solid gray
+		color: pink
+		background: purple
+		border-radius: 4px
+		&:focus
+			outline: none
+			font-weight: bold
+			border: 2px solid black
+	li
+		list-style: none
+		padding: 15px
+		margin: 10px 90px
+
+	span.check
+		display: inline-block
+		padding: 3px
+		width: 12px
+		height: 12px
+		background: transparent
+		border: 1px solid gray
+		border-radius: 5px
+		margin-right: 5px
+		&:hover
+			background: pink
+	span.checked
+		@extend .check
+		background: pink
+	.cancel
+		text-decoration: line-through
+		font-style: italic
+		color: gray
+	i
+		margin-left: 10px
+		&:hover
+			font-size: 1.3em
