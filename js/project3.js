@@ -30,9 +30,10 @@ $(document).ready(function () {
         if(this.$input.val()){
           this.list.push(this.$input.val());
         } else{
-          this.$input.attr('placeholder','You forgot to add a To-Do');
+          var $input = this.$input;
+          $input.attr('placeholder','You forgot to add a To-Do');
           setTimeout(function () {
-            $('input').attr('placeholder','Add a To-Do . . .');
+            $input.attr('placeholder','Add a To-Do . . .');
           }, 3000);
         }
         this.render();
