@@ -161,3 +161,58 @@ var third = numbers(3);
 first(5);
 second(5);
 third(5);
+
+//Currying
+
+var greeting = function (greeting, name) {
+  return greeting + ' ' + name;
+}
+greeting("Hello", "James");
+//return => "Hello James"
+
+var curriedGreeting = (greeting) =>
+                            (name) => {
+                              console.log('Curried' + ' ' + name);
+                              return greeting + ' ' + name;
+                            }
+curriedGreeting("Wassup")("Kevin");
+
+
+var superCurriedGreeting = (greeting) =>
+                              (seperator) =>
+                                (emphasis) =>
+                                  (name) => {
+                                    console.log("Super cool Curried "+ " " + greeting + seperator + name + emphasis);
+                                  }
+var coolGreeting = superCurriedGreeting("Wassup")('. . .');
+coolGreeting("!")("Kevin");
+
+//Composition or Compose
+var compose = function(f, g) {
+  return function(x) {
+    return f(g(x));
+  };
+};
+
+var toUpperCase = function(x) {
+  return x.toUpperCase();
+};
+var exclaim = function(x) {
+  return x + '!';
+};
+
+var shout = compose(exclaim, toUpperCase);
+console.log(shout("All I needed was some"));
+
+var head = (x) => x[0];
+var reverse = (x)=> x.reduce(function(acc, x) {
+  return [x].concat(acc);
+}, []);
+
+var last = compose(head,reverse);
+
+console.log(last(['jumpkick', 'roundhouse', 'uppercut']));
+
+var lastUpper = compose(toUpperCase,compose(head,reverse));
+
+console.log(lastUpper(['jumpkick', 'roundhouse', 'uppercut']));

@@ -96,7 +96,7 @@ div#contacts-section {
         background-color: lightgreen;
         cursor: pointer; }
       div#contacts-section ul li i {
-        margin-left: 10px; }
+        float: right; }
 
 div.list {
   width: 600px;
