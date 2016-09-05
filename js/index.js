@@ -1,11 +1,10 @@
 
 $(document).ready(function () {
-(function buildWater() {
    var amount = 0,//amount you have
 	   bottles = 10; //total amount of water bottles in store
 
     $("#btn").click(function () {
-       bottles = bottles -=1; // each click should subtract 1 from bottles amount.
+       bottles = bottles - 1; // each click should subtract 1 from bottles amount.
        if (bottles > amount) {
         // add this message to the span each time
          $("#here").text("You got a bottle." + " " + "You have" +" " + bottles + " " +"left");
@@ -14,7 +13,6 @@ $(document).ready(function () {
          $("#here").text("You got a bottle." + " " + "You have" +" "+ "0 bottles left");
        }
     });
-})();
 
 //Testing my closure skills
 var $this = $('.dig-container span');
@@ -53,13 +51,13 @@ This was meant just for practice. */
 
 
 $('#box-button').click(function () {
-	$('.box').animate({
+	$('.box').stop().animate({
 		'left': '+=15px'
 	});
 
 //only can be ran once box-button is clicked
 	$('#box-button2').show().click(function () {
-			$('.box').animate({
+			$('.box').stop().animate({
 			'left': '-=15px'
 		});
 	});
